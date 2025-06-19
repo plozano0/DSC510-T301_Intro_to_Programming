@@ -1,22 +1,16 @@
 # DSC 510
-# Week 3
-# Programming Assignment Week 3
+# Week 4
+# Programming Assignment Week 4
 # Author Peter Lozano
 # 06/24/2025
 # ######################## Assignment Details #############################
-# Purpose of program:
-# 1. Print welcome statement for user.
-# 2. Retrieve company name.
-# 3. Retrieve number of feet of fiber optic cable needed
-# to be installed from user.
-# 4. Calculate the installation of fiber optic cable by
-# multiplying number of feet by a conditional statement
-#       4a. If feet entered <= 100. Multiply feet by $.95
-#       4b. If feet entered > 100 & feet <= 250. Multiply feet by $.85
-#       4c. If feet entered > 250 & feet <= 500. Multiply feet by $.75
-#       4d. If feet entered > 500. Multiply feet by $.55
-# 5. Print receipt of user including company name, number of feet requested,
-# and total cost in legible format.
+# 1. Include a main function and wrap majority of code within it
+# 2. Modify my IF statement program to add a cost calculation function
+#    2a. Function should have 2 parameters:
+#        i. feet of fiber
+#        ii. cost per foot
+# 3. Program should return a receipt of the details provided
+
 import locale
 import os
 from datetime import date

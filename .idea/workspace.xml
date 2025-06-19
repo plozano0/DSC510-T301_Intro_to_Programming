@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a08a43c6-a329-408a-8cc5-7c86a7311766" name="Changes" comment="Commit file name change.&#10;Commit main.py&#10;Commit Lozano Week 1 through 3 files&#10;Commit Corrected Weekly files&#10;Commit Week 4 assignment&#10;Commit refactored code">
+      <change afterPath="$PROJECT_DIR$/Lozano_Week5_Assignment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lozano_Week3_Assignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lozano_Week3_Assignment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lozano_Week4_Assignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lozano_Week4_Assignment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,13 +63,20 @@
     "Python.Lozano_DSC510.executor": "Run",
     "Python.Lozano_Week3_Assignment.executor": "Debug",
     "Python.Lozano_Week4_Assignment.executor": "Run",
+    "Python.Lozano_Week5_Assignment.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/peter/OneDrive - Bellevue University/DSC510-T301_Intro_to_Programming/Assignments/DSC510-T301_Intro_to_Programming",
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\peter\OneDrive - Bellevue University\DSC510-T301_Intro_to_Programming\Assignments\DSC510-T301_Intro_to_Programming" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Lozano_Week4_Assignment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DSC510-T301_Intro_to_Programming" />
@@ -192,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750296200928</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit file name change.&#10;Commit main.py&#10;Commit Lozano Week 1 through 3 files&#10;Commit Corrected Weekly files&#10;Commit Week 4 assignment&#10;Commit refactored code">
+      <option name="closed" value="true" />
+      <created>1750301422581</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750301422581</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
