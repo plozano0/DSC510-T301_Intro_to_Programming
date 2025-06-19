@@ -2,8 +2,8 @@
 # Week 3
 # Programming Assignment Week 3
 # Author Peter Lozano
-# 06/17/2025
-# ###################################### Assignment Details #######################################
+# 06/18/2025
+# ######################## Assignment Details #############################
 # Purpose of program:
 # 1. Print welcome statement for user.
 # 2. Retrieve company name.
@@ -46,8 +46,8 @@ def get_amount_requested(prompt):
             return float(user_input)
 
         except ValueError:
-            print(f'The value entered is not a number.'
-                ' Please enter valid number for calculation.')
+            print(f'The value entered is not a number. '
+                'Please enter valid number for calculation.')
 
 
 number_of_feet = get_amount_requested(
@@ -78,7 +78,7 @@ def cost_calculator(amount_requested):
         return total_cost, cost_per_foot
     # Exception will trigger when a non-numeric value is entered.
     except Exception as e:
-        print(f'Exception {e} has occurred. Please enter valid number for calculation.')
+        print(f'Exception {e} has occurred. Please enter valid number.')
         return None
 
 # Initializing the cost_calculator function

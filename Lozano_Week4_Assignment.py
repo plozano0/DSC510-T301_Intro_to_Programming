@@ -3,7 +3,7 @@
 # Programming Assignment Week 3
 # Author Peter Lozano
 # 06/24/2025
-################################################### Assignment Details #############################################
+# ######################## Assignment Details #############################
 # Purpose of program:
 # 1. Print welcome statement for user.
 # 2. Retrieve company name.
@@ -86,7 +86,7 @@ def main():
             return total_cost, cost_per_foot
         # Exception will trigger when a non-numeric value is entered.
         except Exception as e:
-            print(f'Exception {e} has occurred. Please enter valid number for calculation.')
+            print(f'Exception {e} has occurred. Please enter valid number.')
             return None
 
     # Initializing the cost_calculator function
