@@ -94,12 +94,18 @@ def main():
           f"Purchaser: {user_name}\n"
           f"Company Name: {company_name}\n"
           "Fiber optic cable ordered: "
-          f"{locale.format_string("%.2f", number_of_feet, grouping=True)} feet.\n"
-          "Cost per foot: "
+          f"{locale.format_string(
+              "%.2f"
+              , number_of_feet
+              , grouping=True
+              )
+          } feet."
+    )
+    print("Cost per foot: "
           f"{locale.currency(final_rate_per_foot, grouping=True)}\n"
           "Total Cost: "
           f"{locale.currency(calculated_cost, grouping=True)}"
-          )
+    )
     print(f"{'#' * 22} End {'#' * 22}\n")
 
 if __name__ == '__main__':

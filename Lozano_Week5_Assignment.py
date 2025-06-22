@@ -3,22 +3,23 @@
 # Programming Assignment Week 5
 # Author Peter Lozano
 # 07/01/2025
-# ######################## Assignment Details #############################
+# ######################## Assignment Details ##########################
 # Purpose of program:
 # 1. Program is to perform various calculations.
 # 2. Program should include a variety of loops and functions.
-# 3. Program will add, subtract, multiply, divide 2 numbers and provide average
+# 3. Program will add, subtract, multiply, divide 2 numbers and
+# provide average
 # of multiple numbers from the input of the user.
 # 4. Define function named perform_calculation and pass 1 parameter.
-#    4a. This function will take 2 inputs from user and returns a legible and
-#    contextual format for the user.
+#    4a. This function will take 2 inputs from user and returns
+#    a legible and contextual format for the user.
 # 5. Define function named calculate_average that takes no parameters.
-#    5a. This function will ask user how many numbers they wish to input.
+#    5a. This function will ask how many numbers they wish to input.
 #    5b. Function will use the number entered for the count of loops
 #    5c. Within the function it must prompt user to input numbers
 #    in the amount that was given prior to calculate total and average.
-#    5d. The function will return the average in legible and contextual format
-#    for the user.
+#    5d. The function will return the average in legible and
+#    contextual format for the user.
 
 import locale
 import os
@@ -116,8 +117,13 @@ def main():
             if op_choice in ['+', '-', '*', '/']:
                 result = perform_calculation(op_choice)
                 if result is not None:
-                    print(f"\nThe result of the calculation is: {
-                    locale.format_string("%.2f", result, grouping=True)}"
+                    print("\nThe result of the calculation is: "
+                          f"{locale.format_string(
+                            "%.2f"
+                            , result
+                            , grouping=True
+                            )
+                          }"
                     )
             else:
                 print("\nInvalid operation selected. "
@@ -128,7 +134,12 @@ def main():
             average = calculate_average()
             if average is not None:
                 print(f"\nThe calculated average is: "
-                      f"{locale.format_string("%.2f", average, grouping=True)}"
+                      f"{locale.format_string(
+                          "%.2f"
+                          , average
+                          , grouping=True
+                          )
+                      }"
                 )
 
         elif user_choice == 'quit':
