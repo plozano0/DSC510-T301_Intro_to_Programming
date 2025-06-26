@@ -23,20 +23,22 @@ def main():
     total cost of fiber optic cable based on the number of feet requested.
     The following parameters are required:
     :parameter: user_name, company_name, number_of_feet, cost_per_foot
-    The program provides a receipt of the cost with the user and company name
+    The program provides a receipt of the cost with
+    the user and company name
     :return: total_cost ==> float, cost_per_foot ==> float
     """
     # Requesting user input to let us properly welcome them.
     print(f'Welcome to \'{os.path.basename(__file__)}\'')
     user_name = input("Please tell me your name?\n")
-    print(f"Welcome {user_name}! We aim to provide you the best fiber optic "
-          f"cables at the best price guaranteed!"
+    print(f"Welcome {user_name}! We aim to provide you the "
+          f"best fiber optic cables at the best price guaranteed!"
           )
 
     # Requesting user to provide us the company name for receipt purposes.
     company_name = input("What is the name of your company?\n")
 
-    # Require input from user to enter desired number of feet for calculation.
+    # Require input from user to enter desired number
+    # of feet for calculation.
     def get_amount_requested(prompt):
         """
         Ensures user input is a valid float/number for calculation.
@@ -63,7 +65,8 @@ def main():
     # cost_per_foot = 0.95
     def cost_calculator(amount_requested):
         """
-        Calculates total installation cost based on a tiered pricing model.
+        Calculates total installation cost based on
+        a tiered pricing model.
         """
         try:
             if amount_requested > 500:
@@ -80,7 +83,8 @@ def main():
             return total_cost, cost_per_foot
         # Exception will trigger when a non-numeric value is entered.
         except Exception as e:
-            print(f'Exception {e} has occurred. Please enter valid number.')
+            print(f'Exception {e} has occurred. '
+                  f'Please enter valid number.')
             return None
 
     # Initializing the cost_calculator function
