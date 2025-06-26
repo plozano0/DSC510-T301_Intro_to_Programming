@@ -1,4 +1,4 @@
-# DSC 510
+﻿# DSC 510
 # Week 3
 # Programming Assignment Week 3
 # Author Peter Lozano
