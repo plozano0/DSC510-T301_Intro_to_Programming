@@ -130,7 +130,5 @@ def main():
               "The program will now exit."
         )
 
-
-# Standard Python practice to call the main method.
 if __name__ == "__main__":
     main()

@@ -151,6 +151,5 @@ def main():
                   "Please enter 'calc', 'average', or 'quit'."
             )
 
-# Standard entry point for a Python script
 if __name__ == '__main__':
     main()
