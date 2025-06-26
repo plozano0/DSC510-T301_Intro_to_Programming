@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a08a43c6-a329-408a-8cc5-7c86a7311766" name="Changes" comment="Commit file name change.&#10;Commit main.py&#10;Commit Lozano Week 1 through 3 files&#10;Commit Corrected Weekly files&#10;Commit Week 4 assignment&#10;Commit refactored code">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lozano_Week3_Assignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lozano_Week3_Assignment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lozano_Week7_Assignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lozano_Week7_Assignment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -331,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750909682574</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Commit file name change.&#10;Commit main.py&#10;Commit Lozano Week 1 through 3 files&#10;Commit Corrected Weekly files&#10;Commit Week 4 assignment&#10;Commit refactored code">
+      <option name="closed" value="true" />
+      <created>1750911531078</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1750911531078</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

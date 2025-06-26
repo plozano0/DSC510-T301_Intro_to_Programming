@@ -15,12 +15,6 @@
 import os
 import string
 
-
-from Lozano_Week3_Assignment import get_amount_requested
-
-get_amount_requested("Testing prompt for external function import!")
-
-
 def add_word(word, word_counts):
     """
     Summary
