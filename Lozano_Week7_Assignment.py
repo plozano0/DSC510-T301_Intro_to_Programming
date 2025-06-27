@@ -70,7 +70,10 @@ def pretty_print(word_counts):
     :parameter:
         word_counts (dict): The dictionary of word counts.
     """
-    print("\n--- Word Frequency Analysis of the Gettysburg Address ---")
+    print(f"\n{'#' * 10} "
+          "Word Frequency Analysis of the Gettysburg Address "
+          f"{'#' * 10}"
+    )
     # sorted() returns a sorted list of the specified iterable object.
     # We sort by the second element of the tuple (the count) in
     #   descending order.
