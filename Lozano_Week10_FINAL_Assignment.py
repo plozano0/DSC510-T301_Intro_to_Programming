@@ -2,7 +2,7 @@
 # Week 10
 # Programming Assignment Week 10
 # Author Peter Lozano
-# 07/16/2025
+# 08/08/2025
 # ####################### Assignment Details ###########################
 # Purpose of program:
 # 1. Program will return unique word count based on provided text file.
@@ -23,17 +23,20 @@ GEO_API_URL = "http://api.openweathermap.org/geo/1.0/"
 WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 
-def get_geo_coordinates(location_query: str, api_key: str) -> tuple | None:
+def get_geo_coordinates(location_query: str
+                        , api_key: str) -> tuple | None:
     """
-    Fetches geographic coordinates (latitude, longitude) for a given location.
+    Fetches geographic coordinates (latitude, longitude)
+        for a given location.
 
     Args:
-        location_query: A string representing the location (e.g., "90210,US" or "London,GB").
+        location_query: A string representing the location
+            (e.g., "90210,US" or "London,GB").
         api_key: The API key for OpenWeatherMap.
 
     Returns:
-        A tuple containing (latitude, longitude, location_name) on success,
-        or None on failure.
+        A tuple containing (latitude, longitude, location_name) on
+            success, or None on failure.
     """
     params = {
         'q': location_query,
@@ -58,7 +61,9 @@ def get_geo_coordinates(location_query: str, api_key: str) -> tuple | None:
         # The 'direct' endpoint returns a list, 'zip' returns a dict.
         if isinstance(data, list):
             if not data:
-                print("Error: Location not found. Please check your city and state.")
+                print("Error: Location not found. "
+                      "Please check your city and state."
+                )
                 return None
             location_data = data[0]
             lat = location_data.get('lat')
@@ -81,14 +86,20 @@ def get_geo_coordinates(location_query: str, api_key: str) -> tuple | None:
         return lat, lon, location_name
 
     except requests.exceptions.Timeout:
-        print("Error: The request timed out. Please try again later.")
+        print("Error: The request timed out. "
+              "Please try again later."
+        )
         return None
     except requests.exceptions.ConnectionError:
-        print("Error: Could not connect to the server. Check your internet connection.")
+        print("Error: Could not connect to the server. "
+              "Check your internet connection."
+        )
         return None
     except requests.exceptions.HTTPError as http_err:
         if http_err.response.status_code == 401:
-            print("Error: Authentication failed. Please check your API key.")
+            print("Error: Authentication failed. "
+                  "Please check your API key."
+            )
         else:
             print("Error: Zip Code not found. "
                   "Please only use valid US Zip Codes."
@@ -99,7 +110,10 @@ def get_geo_coordinates(location_query: str, api_key: str) -> tuple | None:
         return None
 
 
-def get_weather_data(lat: float, lon: float, api_key: str, units: str = 'imperial') -> dict | None:
+def get_weather_data(lat: float
+                     , lon: float
+                     , api_key: str
+                     , units: str = 'imperial') -> dict | None:
     """
     Fetches weather data using latitude and longitude.
 
@@ -107,10 +121,12 @@ def get_weather_data(lat: float, lon: float, api_key: str, units: str = 'imperia
         lat: Latitude of the location.
         lon: Longitude of the location.
         api_key: The API key for OpenWeatherMap.
-        units: The unit system ('imperial' for Fahrenheit, 'metric' for Celsius).
+        units: The unit system
+        ('imperial' for Fahrenheit, 'metric' for Celsius).
 
     Returns:
-        A dictionary containing weather data on success, or None on failure.
+        A dictionary containing weather data on success,
+        or None on failure.
     """
     params = {
         'lat': lat,
@@ -119,7 +135,10 @@ def get_weather_data(lat: float, lon: float, api_key: str, units: str = 'imperia
         'units': units
     }
     try:
-        response = requests.get(WEATHER_API_URL, params=params, timeout=5)
+        response = requests.get(WEATHER_API_URL
+                                , params=params
+                                , timeout=5
+        )
         response.raise_for_status()
         return response.json()
     except requests.exceptions.Timeout:
@@ -129,14 +148,20 @@ def get_weather_data(lat: float, lon: float, api_key: str, units: str = 'imperia
         print("Error: Could not connect to the weather service.")
         return None
     except requests.exceptions.HTTPError as http_err:
-        print(f"Error: An HTTP error occurred while fetching weather: {http_err}")
+        print(f"Error: An HTTP error occurred while fetching "
+              f"weather: {http_err}"
+        )
         return None
     except requests.exceptions.RequestException as err:
-        print(f"Error: An unexpected error occurred while fetching weather: {err}")
+        print("Error: An unexpected error occurred while fetching "
+              f"weather: {err}"
+        )
         return None
 
 
-def display_weather(weather_data: dict, location_name: str, units: str = 'imperial'):
+def display_weather(weather_data: dict
+                    , location_name: str
+                    , units: str = 'imperial'):
     """
     Displays the parsed weather data in a readable format.
 
@@ -151,16 +176,35 @@ def display_weather(weather_data: dict, location_name: str, units: str = 'imperi
 
     temp_unit = "°F" if units == 'imperial' else "°C"
 
-    # Safely extract data using .get() to avoid errors if a key is missing
-    main_weather = weather_data.get('weather', [{}])[0].get('main', 'N/A')
-    description = weather_data.get('weather', [{}])[0].get('description', 'N/A')
-    temp = weather_data.get('main', {}).get('temp', 'N/A')
-    feels_like = weather_data.get('main', {}).get('feels_like', 'N/A')
-    temp_min = weather_data.get('main', {}).get('temp_min', 'N/A')
-    temp_max = weather_data.get('main', {}).get('temp_max', 'N/A')
-    pressure = weather_data.get('main', {}).get('pressure', 'N/A')
-    humidity = weather_data.get('main', {}).get('humidity', 'N/A')
-    cloud_coverage = weather_data.get('clouds', {}).get('all', 'N/A')
+    # Safely extract data using .get() to avoid errors
+    # if a key is missing
+    main_weather = weather_data.get('weather'
+                                    , [{}]
+                                    )[0].get('main', 'N/A')
+    description = weather_data.get('weather'
+                                   , [{}]
+                                   )[0].get('description', 'N/A')
+    temp = weather_data.get('main'
+                            , {}
+                            ).get('temp', 'N/A')
+    feels_like = weather_data.get('main'
+                                  , {}
+                                  ).get('feels_like', 'N/A')
+    temp_min = weather_data.get('main'
+                                , {}
+                                ).get('temp_min', 'N/A')
+    temp_max = (weather_data.get('main'
+                                , {}
+                                 ).get('temp_max', 'N/A'))
+    pressure = weather_data.get('main'
+                                , {}
+                                ).get('pressure', 'N/A')
+    humidity = weather_data.get('main'
+                                , {}
+                                ).get('humidity', 'N/A')
+    cloud_coverage = weather_data.get('clouds'
+                                      , {}
+                                      ).get('all', 'N/A')
 
     print("\n" + "=" * 40)
     print(f"Weather Forecast for: {location_name}")
@@ -180,7 +224,8 @@ def display_weather(weather_data: dict, location_name: str, units: str = 'imperi
 
 def get_lookup_choice() -> str:
     """
-    Prompts the user to choose their lookup method and validates the input.
+    Prompts the user to choose their lookup method and
+        validates the input.
 
     Returns:
         The validated user choice ('1' or '2').
@@ -199,7 +244,7 @@ def get_location_query(choice: str) -> str | None:
     """
     Gets the location query from the user based on their chosen method.
 
-    Args:
+    :parameter:
         choice: The lookup method ('1' for zip, '2' for city/state).
 
     Returns:
@@ -215,13 +260,17 @@ def get_location_query(choice: str) -> str | None:
 
     elif choice == '2':  # City/State Lookup
         city = input("Enter the city: ").strip()
-        state = input("Enter the 2-letter state abbreviation (e.g., NC, CA): ").strip()
+        state = input("Enter the 2-letter state abbreviation "
+                      "(e.g., NC, CA): "
+        ).strip()
 
         if not city or not state:
             print("City and state cannot be empty.")
             return None
         if len(state) != 2 or not state.isalpha():
-            print("Invalid state abbreviation. Please enter a 2-letter code.")
+            print("Invalid state abbreviation. "
+                  "Please enter a 2-letter code."
+            )
             return None
         # Format for Geocoding API: city,state_code,country_code
         return f"{city},{state},US"
@@ -252,7 +301,9 @@ def main():
 
         # Ask to run again
         while True:
-            again = input("Look up another location? (yes/no): ").strip().lower()
+            again = input(
+                "Look up another location? (y/n): "
+            ).strip().lower()
             if again in [
                  'yes'
                 , 'yea'

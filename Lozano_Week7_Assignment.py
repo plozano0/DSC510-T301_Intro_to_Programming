@@ -82,6 +82,7 @@ def pretty_print(word_counts):
     # The lambda function specifies that we sort by the value (x[1]).
     sorted_word_counts = sorted(
         word_counts.items()
+        # e.g., (four | 12 <-- sorting here)
         , key=lambda x: x[1]
         , reverse=True
     )

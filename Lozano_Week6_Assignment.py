@@ -3,91 +3,132 @@
 # Programming Assignment Week 6
 # Author Peter Lozano
 # 07/08/2025
-# ######################## Assignment Details #############################
+# ####################### Assignment Details ###########################
 # Purpose of program:
-# 1. Program is to perform various calculations.
-# 2. Program should include a variety of loops and functions.
-# 3. Program will add, subtract, multiply, divide 2 numbers and provide average
-# of multiple numbers from the input of the user.
-# 4. Define function named perform_calculation and pass 1 parameter.
-#    4a. This function will take 2 inputs from user and returns a legible and
-#    contextual format for the user.
-# 5. Define function named calculate_average that takes no parameters.
-#    5a. This function will ask user how many numbers they wish to input.
-#    5b. Function will use the number entered for the count of loops
-#    5c. Within the function it must prompt user to input numbers
-#    in the amount that was given prior to calculate total and average.
-#    5d. The function will return the average in legible and contextual format
-#    for the user.
+# 1. Program is to accept an indefinite number of temperatures.
+# 2. Program should end user input based on sentinel value.
+# 3. Program will return the max/min of temperatures entered.
+# 4. Program will also return the number of temperatures in the list.
+#    4a. All values return should be in legible format.
 
 import locale
 import os
 locale.setlocale(locale.LC_ALL, '')
 
+
+def to_fahrenheit(celsius):
+    """Converts a temperature from Celsius to Fahrenheit."""
+    return (celsius * 9 / 5) + 32
+
+
+def to_celsius(fahrenheit):
+    """Converts a temperature from Fahrenheit to Celsius."""
+    return (fahrenheit - 32) * 5 / 9
+
+
 def main():
     """
     Summary
-    Main function of program is to prompt user to enter a number of
-    temperatures indefinitely. It will accept a sentinel value that
+    Main function of the program is to prompt user to enter a number of
+    temperatures indefinitely. It will convert Fahrenheit to Celsius
+    for comparison purposes. It will accept a sentinel value that
     will stop user input. The function will return the min/max
     of temperatures and the number of temperatures entered.
     :return: largest_temp ==> float, smallest_temp ==> float,
     num_temperatures ==> integer
     """
-    print(f'Welcome to \'{os.path.basename(__file__)}\'')
 
-    temperatures = []
+    # Welcome message with assignment name
+    print(f'Welcome to \'{os.path.basename(__file__)}\'\n')
 
-    print(f"{'#' * 22} Temperature Analysis Program {'#' * 22}")
-    print('Enter a series of temperatures (e.g., 98.6, 72, 32).')
-    print('Type \'done\' when you are finished.')
-    # print('#' * 77)
+    # An empty list to store the temperatures entered by the user.
+    # We will store everything in Celsius for consistent comparison.
+    temperatures_celsius = []
+
+    print(f"{'#' * 22} Temperature Analysis Program {'#' * 22}\n")
+    print("Enter temperatures followed by their unit"
+          "(C for Celsius, F for Fahrenheit).")
+    print("For example: '100 F', '32 C', '212f', '0c'")
+    print("Type 'done' when you are finished.\n")
+    print('#' * 75 + '\n')
 
     # Loop indefinitely to collect user input.
-
     while True:
-        # Prompt the user to input a temperature.
-        user_input = input('Enter a temperature (or \'done\' to finish): ')
+        # Prompt the user to input a temperature and its unit.
+        user_input = input("Enter a temperature (e.g., '72 F')"
+                           " or 'done' to finish: ").strip()
 
-        # The value 'done' will stop the user input loop.
+        # The sentinel value 'done' will stop the user input loop.
         if user_input.lower() == 'done':
-            break # Exiting loop
+            break  # Exit the loop
 
-        # A try block to prevent unhandled exceptions for non-numeric input.
+        # A try block to prevent unhandled exceptions for
+        # bad input formats.
         try:
-            # Convert the user's input to a float type.
-            temp = float(user_input)
-            # Add the valid temperature to our list.
-            temperatures.append(temp)
-        except ValueError:
-            # If the input is not a valid number, inform the user and continue.
-            print('Invalid input. Please enter a valid number or \'done\'.')
+            # Split the input into the value and the unit.
+            parts = user_input.split()
+            if len(parts) != 2:
+                # Handle cases like "100" or "100 F F"
+                raise ValueError("Please enter both a number and a unit"
+                                 " (C or F).")
+
+            value_str, unit = parts
+            value = float(value_str)
+            unit = unit.upper()
+
+            # Convert to Celsius for comparison purposes.
+            if unit == 'C':
+                temperatures_celsius.append(value)
+            elif unit == 'F':
+                celsius_temp = to_celsius(value)
+                temperatures_celsius.append(celsius_temp)
+            else:
+                # Handle incorrect units like 'K' or 'X'
+                print("Invalid unit. Please use 'C' for Celsius or"
+                      " 'F' for Fahrenheit.")
+                continue  # Skip to the next loop iteration
+
+        except (ValueError, IndexError):
+            # If the input is not a valid number or format,
+            # inform the user and continue.
+            print("Invalid input. Please enter in the format "
+                  "'value unit' (e.g., '98.6 F').")
 
     # After the loop, check if any temperatures were actually entered.
-    if temperatures:
-        # Evaluate the temperatures list to determine the largets and smallest.
-        largest_temp = max(temperatures)
-        smallest_temp = min(temperatures)
+    if temperatures_celsius:
+        # Evaluate the list to determine the largest and
+        # smallest in Celsius.
+        largest_c = max(temperatures_celsius)
+        smallest_c = min(temperatures_celsius)
 
-        # Determine the number of temperatures entered by the user.
-        num_temperatures = len(temperatures)
+        # Convert the results back to Fahrenheit for display.
+        largest_f = to_fahrenheit(largest_c)
+        smallest_f = to_fahrenheit(smallest_c)
 
-        print('#' * 28 + ' Analysis Complete ' + '#' * 28)
+        # Determine the number of temperatures entered.
+        num_temperatures = len(temperatures_celsius)
 
-        # Print message telling the user how many temperatures were entered.
-        print(f'You entered a total of {num_temperatures} temperatures.')
+        print("\n--- Analysis Complete ---")
+        # Print the largest temperature in both formats.
+        print(f"Largest temperature: "
+              f"{largest_c:.2f}°C / {largest_f:.2f}°F"
+        )
+        # Print the smallest temperature in both formats.
+        print(f"Smallest temperature: "
+              f"{smallest_c:.2f}°C / {smallest_f:.2f}°F"
+        )
 
-        # Print the largest temperature in a legible format.
-        print(f'Largest temperature entered: {largest_temp}°')
-
-        # Print the smallest temperature in a legible format.
-        print(f'Smallest temperature entered: {smallest_temp}°')
-
-        print('#' * 75)
+        # Print a message that tells the user how many temperatures
+        # are in the list.
+        print("You entered a total of "
+              f"{num_temperatures} temperatures."
+        )
+        print("-" * 30)
     else:
         # If the list is empty, print a message indicating that.
-        print('No temperatures were entered. The program will now exit.')
+        print("\nNo temperatures were entered. "
+              "The program will now exit."
+        )
 
-# Standard entry point for a Python script
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

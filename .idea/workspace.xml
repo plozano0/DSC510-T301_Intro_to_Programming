@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a08a43c6-a329-408a-8cc5-7c86a7311766" name="Changes" comment="Commit file name change.&#10;Commit main.py&#10;Commit Lozano Week 1 through 3 files&#10;Commit Corrected Weekly files&#10;Commit Week 4 assignment&#10;Commit refactored code">
-      <change afterPath="$PROJECT_DIR$/Lozano_Week10_FINAL_Assignment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lozano_Week10.1_Assignment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lozano_Week8_Assignment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lozano_Week9_Assignment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lozano_Week10_FINAL_Assignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lozano_Week10_FINAL_Assignment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lozano_Week6_Assignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lozano_Week6_Assignment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lozano_Week6_Assignment2.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Lozano_Week7_Assignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lozano_Week7_Assignment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +67,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.Hello World.executor": "Run",
     "Python.Lozano_DSC510.executor": "Run",
+    "Python.Lozano_Week10.1_Assignment.executor": "Run",
     "Python.Lozano_Week10_FINAL_Assignment.executor": "Run",
     "Python.Lozano_Week3_Assignment.executor": "Debug",
     "Python.Lozano_Week4_Assignment.executor": "Run",
@@ -68,7 +75,9 @@
     "Python.Lozano_Week6_Assignment.executor": "Run",
     "Python.Lozano_Week6_Assignment2.executor": "Run",
     "Python.Lozano_Week7_Assignment.executor": "Run",
-    "Python.main.executor": "Debug",
+    "Python.Lozano_Week8_Assignment.executor": "Run",
+    "Python.Lozano_Week9_Assignment.executor": "Run",
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -125,7 +134,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lozano_Week6_Assignment.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\peter\OneDrive - Bellevue University\DSC510-T301_Intro_to_Programming\Assignments\DSC510-T301_Intro_to_Programming\Lozano_Week6_Assignment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,7 +143,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Lozano_Week6_Assignment2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Lozano_Week6_Assignment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DSC510-T301_Intro_to_Programming" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,7 +156,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lozano_Week6_Assignment2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lozano_Week6_Assignment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -347,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750911551276</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Commit file name change.&#10;Commit main.py&#10;Commit Lozano Week 1 through 3 files&#10;Commit Corrected Weekly files&#10;Commit Week 4 assignment&#10;Commit refactored code">
+      <option name="closed" value="true" />
+      <created>1750997770630</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750997770630</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
