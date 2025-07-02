@@ -11,9 +11,7 @@
 # 4. Program will also return the number of temperatures in the list.
 #    4a. All values return should be in legible format.
 
-import locale
 import os
-locale.setlocale(locale.LC_ALL, '')
 
 
 def to_fahrenheit(celsius):
