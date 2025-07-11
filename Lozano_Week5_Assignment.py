@@ -2,7 +2,7 @@
 # Week 5
 # Programming Assignment Week 5
 # Author Peter Lozano
-# 07/01/2025
+# 07/03/2025
 # ######################## Assignment Details ##########################
 # Purpose of program:
 # 1. Program is to perform various calculations.
@@ -69,7 +69,7 @@ def calculate_average():
     This function first asks how many numbers will be entered and then uses a
     for loop to gather the numbers. Includes error handling for all inputs.
 
-    Returns:
+    :returns:
         float: The average of the numbers. Returns None if an error occurs.
     """
     try:

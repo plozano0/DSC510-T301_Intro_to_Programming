@@ -16,6 +16,35 @@ import os
 from datetime import date
 
 locale.setlocale(locale.LC_ALL, '')
+
+
+# Creating variables to calculate the total cost.
+# cost_per_foot = 0.95
+def cost_calculator(amount_requested):
+    """
+    Calculates total installation cost based on
+    a tiered pricing model.
+    """
+    try:
+        if amount_requested > 500:
+            cost_per_foot = 0.55
+        elif amount_requested > 250:
+            cost_per_foot = 0.75
+        elif amount_requested > 100:
+            cost_per_foot = 0.85
+        else:
+            cost_per_foot = 0.95
+
+        # Calculating total cost based on met condition
+        total_cost = amount_requested * cost_per_foot
+        return total_cost, cost_per_foot
+    # Exception will trigger when a non-numeric value is entered.
+    except Exception as e:
+        print(f'Exception {e} has occurred. '
+              f'Please enter valid number.')
+        return None
+
+
 def main():
     """
     Summary
@@ -60,32 +89,6 @@ def main():
         "fiber optic cable is needed?\n"
         "Enter your number here: "
     )
-
-    # Creating variables to calculate the total cost.
-    # cost_per_foot = 0.95
-    def cost_calculator(amount_requested):
-        """
-        Calculates total installation cost based on
-        a tiered pricing model.
-        """
-        try:
-            if amount_requested > 500:
-                cost_per_foot = 0.55
-            elif amount_requested > 250:
-                cost_per_foot = 0.75
-            elif amount_requested > 100:
-                cost_per_foot = 0.85
-            else:
-                cost_per_foot = 0.95
-
-            # Calculating total cost based on met condition
-            total_cost = amount_requested * cost_per_foot
-            return total_cost, cost_per_foot
-        # Exception will trigger when a non-numeric value is entered.
-        except Exception as e:
-            print(f'Exception {e} has occurred. '
-                  f'Please enter valid number.')
-            return None
 
     # Initializing the cost_calculator function
     calculated_cost, final_rate_per_foot = cost_calculator(number_of_feet)
