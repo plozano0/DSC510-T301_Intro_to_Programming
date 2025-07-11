@@ -59,12 +59,11 @@ def main():
         # The sentinel value 'done' will stop the user input loop.
         if user_input.lower() == 'done':
             break  # Exit the loop
-
+        # Split the input into the value and the unit.
+        parts = user_input.split()
         # A try block to prevent unhandled exceptions for
         # bad input formats.
         try:
-            # Split the input into the value and the unit.
-            parts = user_input.split()
             if len(parts) != 2:
                 # Handle cases like "100" or "100 F F"
                 raise ValueError("Please enter both a number and a unit"
