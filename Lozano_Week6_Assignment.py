@@ -41,7 +41,7 @@ def main():
 
     # An empty list to store the temperatures entered by the user.
     # We will store everything in Celsius for consistent comparison.
-    temperatures_celsius = []
+    temperatures = []
 
     print(f"{'#' * 22} Temperature Analysis Program {'#' * 22}\n")
     print("Enter temperatures followed by their unit"
@@ -59,8 +59,10 @@ def main():
         # The sentinel value 'done' will stop the user input loop.
         if user_input.lower() == 'done':
             break  # Exit the loop
+
         # Split the input into the value and the unit.
         parts = user_input.split()
+
         # A try block to prevent unhandled exceptions for
         # bad input formats.
         try:
@@ -75,10 +77,10 @@ def main():
 
             # Convert to Celsius for comparison purposes.
             if unit == 'C':
-                temperatures_celsius.append(value)
+                temperatures.append(value)
             elif unit == 'F':
                 celsius_temp = to_celsius(value)
-                temperatures_celsius.append(celsius_temp)
+                temperatures.append(celsius_temp)
             else:
                 # Handle incorrect units like 'K' or 'X'
                 print("Invalid unit. Please use 'C' for Celsius or"
@@ -92,18 +94,18 @@ def main():
                   "'value unit' (e.g., '98.6 F').")
 
     # After the loop, check if any temperatures were actually entered.
-    if temperatures_celsius:
+    if temperatures:
         # Evaluate the list to determine the largest and
         # smallest in Celsius.
-        largest_c = max(temperatures_celsius)
-        smallest_c = min(temperatures_celsius)
+        largest_c = max(temperatures)
+        smallest_c = min(temperatures)
 
         # Convert the results back to Fahrenheit for display.
         largest_f = to_fahrenheit(largest_c)
         smallest_f = to_fahrenheit(smallest_c)
 
         # Determine the number of temperatures entered.
-        num_temperatures = len(temperatures_celsius)
+        num_temperatures = len(temperatures)
 
         print("\n--- Analysis Complete ---")
         # Print the largest temperature in both formats.
