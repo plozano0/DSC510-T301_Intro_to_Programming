@@ -112,16 +112,19 @@ def main():
 
     # The text of the Gettysburg Address
     word_counts = {}
-    try:
-        with open(
-                'C:/Users/peter/OneDrive - Bellevue University/'
-                'gettysburg.txt'
-                , 'r'
-        ) as fileHandle:
-            for line in fileHandle:
-                process_line(line, word_counts)
-    except FileNotFoundError as e:
-        print(e)
+    file_path = ''
+    while not os.path.exists(file_path):
+        try:
+            file_path = input("Please enter the full path to the text file: ")
+            with open(file_path, 'r') as fileHandle:
+                for line in fileHandle:
+                    process_line(line, word_counts)
+        except FileNotFoundError:
+            print(f"Error: The file '{file_path}' was not found. Please try again.")
+        except IOError as e:
+            print(f"Error reading file: {e}. Please check permissions or file integrity.")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
 
     # Split the text into lines
     lines = word_counts
