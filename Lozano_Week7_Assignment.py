@@ -2,7 +2,7 @@
 # Week 7
 # Programming Assignment Week 7
 # Author Peter Lozano
-# 07/16/2025
+# 07/19/2025
 # ####################### Assignment Details ###########################
 # Purpose of program:
 # 1. Program will return unique word count based on provided text file.

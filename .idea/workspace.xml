@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a08a43c6-a329-408a-8cc5-7c86a7311766" name="Changes" comment="Commit file name change.&#10;Commit main.py&#10;Commit Lozano Week 1 through 3 files&#10;Commit Corrected Weekly files&#10;Commit Week 4 assignment&#10;Commit refactored code">
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lozano_Week7_Assignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lozano_Week7_Assignment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lozano_Week8_Assignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lozano_Week8_Assignment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,38 +56,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.Hello World.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Lozano_DSC510.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Lozano_Week10.1_Assignment.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Lozano_Week10_FINAL_Assignment.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Lozano_Week3_Assignment.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.Lozano_Week4_Assignment.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Lozano_Week5_Assignment.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Lozano_Week6_Assignment.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Lozano_Week6_Assignment2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Lozano_Week7_Assignment.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Lozano_Week8_Assignment.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Lozano_Week9_Assignment.executor&quot;: &quot;Run&quot;,
-    &quot;Python.daf.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/peter/OneDrive - Bellevue University/DSC510-T301_Intro_to_Programming/Assignments/DSC510-T301_Intro_to_Programming&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Hello World.executor": "Run",
+    "Python.Lozano_DSC510.executor": "Run",
+    "Python.Lozano_Week10.1_Assignment.executor": "Run",
+    "Python.Lozano_Week10_FINAL_Assignment.executor": "Run",
+    "Python.Lozano_Week3_Assignment.executor": "Debug",
+    "Python.Lozano_Week4_Assignment.executor": "Run",
+    "Python.Lozano_Week5_Assignment.executor": "Run",
+    "Python.Lozano_Week6_Assignment.executor": "Run",
+    "Python.Lozano_Week6_Assignment2.executor": "Run",
+    "Python.Lozano_Week7_Assignment.executor": "Run",
+    "Python.Lozano_Week8_Assignment.executor": "Run",
+    "Python.Lozano_Week9_Assignment.executor": "Run",
+    "Python.daf.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.test.executor": "Debug",
+    "Python.test2.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/peter/OneDrive - Bellevue University/DSC510-T301_Intro_to_Programming/Assignments/DSC510-T301_Intro_to_Programming",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\peter\OneDrive - Bellevue University\DSC510-T301_Intro_to_Programming\Assignments\DSC510-T301_Intro_to_Programming" />
@@ -240,6 +244,10 @@
       <workItem from="1752276617509" duration="1766000" />
       <workItem from="1752280486591" duration="698000" />
       <workItem from="1752615726088" duration="1000000" />
+      <workItem from="1752943401702" duration="416000" />
+      <workItem from="1753211621703" duration="1214000" />
+      <workItem from="1753403674073" duration="985000" />
+      <workItem from="1753555352394" duration="740000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -409,7 +417,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752281174017</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Commit file name change.&#10;Commit main.py&#10;Commit Lozano Week 1 through 3 files&#10;Commit Corrected Weekly files&#10;Commit Week 4 assignment&#10;Commit refactored code">
+      <option name="closed" value="true" />
+      <created>1752943740041</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1752943740041</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +474,10 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lozano_Week7_Assignment_py$Lozano_Week7_Assignment.coverage" NAME="Lozano_Week7_Assignment Coverage Results" MODIFIED="1752943565133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Lozano_Week7_Assignment_py$test.coverage" NAME="test Coverage Results" MODIFIED="1752616243124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lozano_Week8_Assignment_py$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1753556178348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lozano_Week8_Assignment_py$Lozano_Week8_Assignment.coverage" NAME="Lozano_Week8_Assignment Coverage Results" MODIFIED="1753555635937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Lozano_Week3_Assignment_py$Lozano_Week5_Assignment.coverage" NAME="Lozano_Week5_Assignment Coverage Results" MODIFIED="1750391114886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Lozano_Week7_Assignment_py$Lozano_Week6_Assignment.coverage" NAME="Lozano_Week6_Assignment Coverage Results" MODIFIED="1752281080632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Lozano_Week3_Assignment_py$Lozano_Week4_Assignment.coverage" NAME="Lozano_Week4_Assignment Coverage Results" MODIFIED="1750391077149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
