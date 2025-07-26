@@ -82,8 +82,8 @@ def process_file(word_counts, filename):
             )
 
             # Sort the dictionary items by count
-            # (the second element, x[1])
-            # in descending order.
+            #   (the second element, x[1])
+            #   in descending order.
             sorted_word_counts = sorted(
                 word_counts.items(),
                 # e.g., (four | 12 <-- sorting here)
@@ -142,7 +142,7 @@ def main():
 
     # Construct the full path for the output file
     # If the original_file_directory is empty
-    # then os.path.join will return the original directory.
+    #   then os.path.join will return the original directory.
     output_filename = os.path.join(
         original_file_directory
         , output_filename_base
@@ -152,7 +152,7 @@ def main():
     try:
         # Open the user-specified file in write mode ('w').
         # This will create the file or overwrite it if
-        # it already exists.
+        #   it already exists.
         with open(output_filename, 'w') as file:
             file.write(f"Number of unique words: {len(word_counts)}\n")
     except Exception as e:
@@ -173,6 +173,7 @@ def main():
     )
 
 
-# This check ensures the main function is called only when the script is executed directly.
+# This check ensures the main function is called only when
+#   the script is executed directly.
 if __name__ == "__main__":
     main()
