@@ -7,7 +7,7 @@
 # Purpose of program:
 # 1. Program will return unique word count based on provided text file.
 # 2. Program will remove punctuation from words and convert the words.
-# to a common case, and remove any whitespace.
+#   to a common case, and remove any whitespace.
 # 3. Program should contain 4 main functions:
 #    3a. add_word - adds each word in file.
 #    3b. process_line - convert words to common case.
@@ -29,16 +29,16 @@ def get_geo_coordinates(location_query: str
     Fetches geographic coordinates (latitude, longitude)
         for a given location.
 
-    Args:
+    :Args:
         location_query: A string representing the location
             (e.g., "90210,US" or "London,GB").
         api_key: The API key for OpenWeatherMap.
 
-    Returns:
+    :Returns:
         A tuple containing (latitude, longitude, location_name) on
             success, or None on failure.
     """
-    params = {
+    parameters = {
         'q': location_query,
         'limit': 1,
         'appid': api_key
@@ -47,13 +47,13 @@ def get_geo_coordinates(location_query: str
     # For cities, 'q={city_name},{state_code},{country_code}'
     if location_query.split(',')[0].strip().isdigit():
         geo_url = f"{GEO_API_URL}zip"
-        params = {'zip': location_query, 'appid': api_key}
+        parameters = {'zip': location_query, 'appid': api_key}
     else:
         geo_url = f"{GEO_API_URL}direct"
-        params = {'q': location_query, 'limit': 1, 'appid': api_key}
+        parameters = {'q': location_query, 'limit': 1, 'appid': api_key}
 
     try:
-        response = requests.get(geo_url, params=params, timeout=5)
+        response = requests.get(geo_url, params=parameters, timeout=5)
         # Raise an exception for bad status codes (4xx or 5xx)
         response.raise_for_status()
         data = response.json()
@@ -117,18 +117,18 @@ def get_weather_data(lat: float
     """
     Fetches weather data using latitude and longitude.
 
-    Args:
+    :Args:
         lat: Latitude of the location.
         lon: Longitude of the location.
         api_key: The API key for OpenWeatherMap.
         units: The unit system
         ('imperial' for Fahrenheit, 'metric' for Celsius).
 
-    Returns:
+    :Returns:
         A dictionary containing weather data on success,
         or None on failure.
     """
-    params = {
+    parameters = {
         'lat': lat,
         'lon': lon,
         'appid': api_key,
@@ -136,7 +136,7 @@ def get_weather_data(lat: float
     }
     try:
         response = requests.get(WEATHER_API_URL
-                                , params=params
+                                , params=parameters
                                 , timeout=5
         )
         response.raise_for_status()
@@ -165,7 +165,7 @@ def display_weather(weather_data: dict
     """
     Displays the parsed weather data in a readable format.
 
-    Args:
+    :Args:
         weather_data: A dictionary of weather information from the API.
         location_name: The formatted name of the location.
         units: The unit system to display correct symbols.
@@ -227,7 +227,7 @@ def get_lookup_choice() -> str:
     Prompts the user to choose their lookup method and
         validates the input.
 
-    Returns:
+    :Returns:
         The validated user choice ('1' or '2').
     """
     while True:
@@ -244,10 +244,10 @@ def get_location_query(choice: str) -> str | None:
     """
     Gets the location query from the user based on their chosen method.
 
-    :parameter:
+    :Parameter:
         choice: The lookup method ('1' for zip, '2' for city/state).
 
-    Returns:
+    :Returns:
         A formatted query string for the API, or None.
     """
     if choice == '1':  # Zip Code Lookup

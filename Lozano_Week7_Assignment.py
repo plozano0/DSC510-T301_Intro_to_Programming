@@ -126,14 +126,13 @@ def main():
         except Exception as e:
             print(f"An unexpected error occurred: {e}")
 
-    # Split the text into lines
-    lines = word_counts
-
     # Process each line
-    for line in lines:
+    for line in word_counts:
         process_line(line, word_counts)
 
     # Print the final results
+    print(f"\nTotal number of words: {sum(word_counts)}")
+    print(f"Unique words: {len(set(word_counts))}")
     pretty_print(word_counts)
 
 if __name__ == "__main__":

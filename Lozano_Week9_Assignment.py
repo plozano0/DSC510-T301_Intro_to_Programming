@@ -2,7 +2,7 @@
 # Week 9
 # Programming Assignment Week 9
 # Author Peter Lozano
-# 07/30/2025
+# 08/01/2025
 # ####################### Assignment Details ###########################
 # This program generates a Chuck Norris joke using an API.
 # 1. It defaults using the dev category but allows the user
