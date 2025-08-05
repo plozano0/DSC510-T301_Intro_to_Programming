@@ -19,8 +19,6 @@ import locale
 
 class CashRegister:
     """
-    A simple CashRegister class.
-
     This class simulates a cash register by keeping track of the total price
     and the number of items added. It provides methods to add items and
     retrieve the current totals.
@@ -38,27 +36,29 @@ class CashRegister:
         """
         Adds an item to the register.
 
-        Args:
+        :parameters:
             price (float): The price of the item to be added.
         """
         self.total_price += price
         self.item_count += 1
         print(f"Item added. Current subtotal: {locale.currency(self.total_price)}")
 
+    @property
     def get_total(self):
         """
         Getter method for the total price.
 
-        Returns:
+        :returns:
             float: The current total price of all items.
         """
         return self.total_price
 
+    @property
     def get_count(self):
         """
         Getter method for the item count.
 
-        Returns:
+        :returns:
             int: The total number of items added.
         """
         return self.item_count
@@ -68,10 +68,8 @@ def main():
     """
     Main function to run the cash register program.
     """
-    # --- Set Locale for Currency Formatting ---
+    # Set Locale for Currency Formatting
     # Using 'en_US.UTF-8' for standard US currency format.
-    # On some systems, you might need to use an empty string '' to use the
-    # system's default locale: locale.setlocale(locale.LC_ALL, '')
 
     # Welcome message with assignment name
     print(f'Running: \'{os.path.basename(__file__)}\'\n')
@@ -116,8 +114,8 @@ def main():
             )
 
     # --- Display Final Totals ---
-    total_items = register.get_count()
-    total_cost = register.get_total()
+    total_items = register.get_count
+    total_cost = register.get_total
 
     print("\n" + "-" * 50)
     print("                Transaction Complete")
