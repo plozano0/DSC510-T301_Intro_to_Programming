@@ -7,7 +7,6 @@
     <list default="true" id="a08a43c6-a329-408a-8cc5-7c86a7311766" name="Changes" comment="Commit file name change.&#10;Commit main.py&#10;Commit Lozano Week 1 through 3 files&#10;Commit Corrected Weekly files&#10;Commit Week 4 assignment&#10;Commit refactored code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lozano_Week10_FINAL_Assignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lozano_Week10_FINAL_Assignment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lozano_Week7_Assignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lozano_Week7_Assignment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
     "Python.Hello World.executor": "Run",
     "Python.Lozano_DSC510.executor": "Run",
     "Python.Lozano_Week10.1_Assignment.executor": "Run",
-    "Python.Lozano_Week10_FINAL_Assignment.executor": "Run",
+    "Python.Lozano_Week10_FINAL_Assignment.executor": "Debug",
     "Python.Lozano_Week3_Assignment.executor": "Debug",
     "Python.Lozano_Week4_Assignment.executor": "Run",
     "Python.Lozano_Week5_Assignment.executor": "Run",
@@ -249,6 +248,8 @@
       <workItem from="1753747397618" duration="3611000" />
       <workItem from="1753829843308" duration="1652000" />
       <workItem from="1753917870270" duration="2476000" />
+      <workItem from="1754088096143" duration="600000" />
+      <workItem from="1754350145058" duration="2641000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -442,7 +443,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753556712805</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Commit file name change.&#10;Commit main.py&#10;Commit Lozano Week 1 through 3 files&#10;Commit Corrected Weekly files&#10;Commit Week 4 assignment&#10;Commit refactored code">
+      <option name="closed" value="true" />
+      <created>1754088536221</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1754088536221</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,6 +489,11 @@
           <line>4</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Lozano_Week10_FINAL_Assignment.py</url>
+          <line>290</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -496,6 +510,7 @@
     <SUITE FILE_PATH="coverage/Lozano_Week8_Assignment_py$Lozano_Week8_Assignment.coverage" NAME="Lozano_Week8_Assignment Coverage Results" MODIFIED="1753918398253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Lozano_Week3_Assignment_py$Lozano_Week5_Assignment.coverage" NAME="Lozano_Week5_Assignment Coverage Results" MODIFIED="1750391114886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Lozano_Week7_Assignment_py$Lozano_Week6_Assignment.coverage" NAME="Lozano_Week6_Assignment Coverage Results" MODIFIED="1752281080632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lozano_Week8_Assignment_py$Lozano_Week10_FINAL_Assignment.coverage" NAME="Lozano_Week10_FINAL_Assignment Coverage Results" MODIFIED="1754350502199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Lozano_Week7_Assignment_py$daf.coverage" NAME="daf Coverage Results" MODIFIED="1752023213363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Lozano_Week8_Assignment_py$main.coverage" NAME="main Coverage Results" MODIFIED="1753917878699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Lozano_Week8_Assignment_py$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1753556178348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

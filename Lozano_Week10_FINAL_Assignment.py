@@ -14,23 +14,22 @@
 #    3c. pretty_print - prints the results in a legible format.
 
 import requests
-import sys
 import os
 
-# --- Constants ---
+# --- Hardcoded values for GET request ---
 API_KEY = "f53e22d038e2d31de9e623faf7ea1003"
 GEO_API_URL = "http://api.openweathermap.org/geo/1.0/"
 WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 
-def get_geo_coordinates(location_query: str
+def get_geo_coordinates(location_info: str
                         , api_key: str) -> tuple | None:
     """
-    Fetches geographic coordinates (latitude, longitude)
+    Gets geographic coordinates (latitude, longitude)
         for a given location.
 
     :Args:
-        location_query: A string representing the location
+        location_info: A string representing the location
             (e.g., "90210,US" or "London,GB").
         api_key: The API key for OpenWeatherMap.
 
@@ -39,18 +38,18 @@ def get_geo_coordinates(location_query: str
             success, or None on failure.
     """
     parameters = {
-        'q': location_query,
+        'q': location_info,
         'limit': 1,
         'appid': api_key
     }
     # For zip codes, the API expects 'zip={zip_code},{country_code}'
     # For cities, 'q={city_name},{state_code},{country_code}'
-    if location_query.split(',')[0].strip().isdigit():
+    if location_info.split(',')[0].strip().isdigit():
         geo_url = f"{GEO_API_URL}zip"
-        parameters = {'zip': location_query, 'appid': api_key}
+        parameters = {'zip': location_info, 'appid': api_key}
     else:
         geo_url = f"{GEO_API_URL}direct"
-        parameters = {'q': location_query, 'limit': 1, 'appid': api_key}
+        parameters = {'q': location_info, 'limit': 1, 'appid': api_key}
 
     try:
         response = requests.get(geo_url, params=parameters, timeout=5)
@@ -115,7 +114,7 @@ def get_weather_data(lat: float
                      , api_key: str
                      , units: str = 'imperial') -> dict | None:
     """
-    Fetches weather data using latitude and longitude.
+    Gets weather data using latitude and longitude.
 
     :Args:
         lat: Latitude of the location.
@@ -125,7 +124,7 @@ def get_weather_data(lat: float
         ('imperial' for Fahrenheit, 'metric' for Celsius).
 
     :Returns:
-        A dictionary containing weather data on success,
+        Dictionary containing weather data on success,
         or None on failure.
     """
     parameters = {
@@ -146,11 +145,6 @@ def get_weather_data(lat: float
         return None
     except requests.exceptions.ConnectionError:
         print("Error: Could not connect to the weather service.")
-        return None
-    except requests.exceptions.HTTPError as http_err:
-        print(f"Error: An HTTP error occurred while fetching "
-              f"weather: {http_err}"
-        )
         return None
     except requests.exceptions.RequestException as err:
         print("Error: An unexpected error occurred while fetching "
@@ -176,11 +170,12 @@ def display_weather(weather_data: dict
 
     temp_unit = "°F" if units == 'imperial' else "°C"
 
-    # Safely extract data using .get() to avoid errors
-    # if a key is missing
+    # Extract data using .get() and avoid errors
+    #   if a key is missing
     main_weather = weather_data.get('weather'
                                     , [{}]
                                     )[0].get('main', 'N/A')
+    # Description provides details of main_weather (e.g., heavy intensity rain)
     description = weather_data.get('weather'
                                    , [{}]
                                    )[0].get('description', 'N/A')
@@ -253,8 +248,10 @@ def get_location_query(choice: str) -> str | None:
     if choice == '1':  # Zip Code Lookup
         while True:
             zip_code = input("Enter the 5-digit US zip code: ").strip()
+            # Error handling prior to sending GET request to API
+
             if len(zip_code) == 5 and zip_code.isdigit():
-                # Format for Geocoding API: zip_code,country_code
+                # Format for Geocoding API: zip_code, country_code
                 return f"{zip_code},US"
             print("Invalid zip code. Please enter exactly 5 digits.")
 
@@ -267,18 +264,27 @@ def get_location_query(choice: str) -> str | None:
         if not city or not state:
             print("City and state cannot be empty.")
             return None
+
+        # Error handling prior to sending GET request to API
         if len(state) != 2 or not state.isalpha():
             print("Invalid state abbreviation. "
                   "Please enter a 2-letter code."
             )
             return None
-        # Format for Geocoding API: city,state_code,country_code
+        # Format for Geocoding API: city, state_code, country_code
         return f"{city},{state},US"
     return None
 
 
 def main():
-    """Main function to run the weather application."""
+    """Main function to run the weather application.
+    Order of application:
+    1. Receives choice from user.
+    2. Receives location query from user.
+    3. Sends GET request to OpenWeatherMap API.
+    4. Parses and displays the weather data.
+    5. Asks user if they want to run again.
+    """
     print(f'\'{os.path.basename(__file__)}\'\n')
     print("--- Welcome to the Python Weather App ---")
 
