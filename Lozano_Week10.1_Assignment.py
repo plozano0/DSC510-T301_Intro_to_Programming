@@ -1,6 +1,6 @@
 ﻿# DSC 510
-# Week 9
-# Programming Assignment Week 9
+# Week 10
+# Programming Assignment Week 10
 # Author Peter Lozano
 # 08/07/2025
 # ####################### Assignment Details ###########################
@@ -68,11 +68,13 @@ def main():
     """
     Main function to run the cash register program.
     """
-    # Set Locale for Currency Formatting
-    # Using 'en_US.UTF-8' for standard US currency format.
-
+    # Setting total width for legibility of program
+    width = 40
     # Welcome message with assignment name
     print(f'Running: \'{os.path.basename(__file__)}\'\n')
+
+    # Set Locale for Currency Formatting
+    # Using 'en_US.UTF-8' for standard US currency format.
 
     try:
         locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
@@ -85,7 +87,7 @@ def main():
 
     # --- Welcome Message ---
     print("=" * 50)
-    print("      Welcome to the Simple Cash Register!")
+    print(f"{'Welcome to the Simple Cash Register':^50}")
     print("=" * 50)
 
     # --- Create an instance of the CashRegister ---
@@ -113,19 +115,18 @@ def main():
                   "Please enter a valid number for the price."
             )
 
-    # --- Display Final Totals ---
+    # Display Final Totals
     total_items = register.get_count
-    total_cost = register.get_total
+    total_cost = locale.currency(register.get_total)
 
     print("\n" + "-" * 50)
-    print("                Transaction Complete")
+    print(f"{"Transaction Complete":^50}")
     print("-" * 50)
-    print(f"\nTotal number of items in the cart: {total_items}")
+    print(f"\nTotal number of items in the cart: {total_items:>10}")
     # Use locale.currency to format the output
-    print(f"Total amount of the cart: {locale.currency(total_cost)}")
+    print(f"Total amount of the cart: {total_cost:>20}")
     print("\nThank you for using the cash register!")
 
 
-# --- Call to Main ---
 if __name__ == "__main__":
     main()
