@@ -112,6 +112,7 @@ def get_geo_coordinates(location_info: str
 def get_weather_data(lat: float
                      , lon: float
                      , api_key: str
+                     # Standard is in Kelvin (K). Imperial is °F
                      , units: str = 'imperial') -> dict | None:
     """
     Gets weather data using latitude and longitude.
@@ -175,7 +176,8 @@ def display_weather(weather_data: dict
     main_weather = weather_data.get('weather'
                                     , [{}]
                                     )[0].get('main', 'N/A')
-    # Description provides details of main_weather (e.g., heavy intensity rain)
+    # Description provides details of main_weather
+    #   (e.g., heavy intensity rain)
     description = weather_data.get('weather'
                                    , [{}]
                                    )[0].get('description', 'N/A')
@@ -200,6 +202,13 @@ def display_weather(weather_data: dict
     cloud_coverage = weather_data.get('clouds'
                                       , {}
                                       ).get('all', 'N/A')
+    wind_speed = weather_data.get('wind'
+                                  , {}
+                                   ).get('speed', 'N/A')
+    visibility = weather_data.get('visibility', 'N/A')
+
+    # Max visibility = 10,000
+    percentage_visibility = (float(visibility) / 10000) * 100
 
     print("\n" + "=" * 40)
     print(f"Weather Forecast for: {location_name}")
@@ -207,6 +216,7 @@ def display_weather(weather_data: dict
     print(f"Conditions:       {main_weather} ({description})")
     print(f"Temperature:      {temp}{temp_unit}")
     print(f"Feels Like:       {feels_like}{temp_unit}")
+    print(f"Wind Speed:       {wind_speed} m/s")
     print("-" * 20)
     print(f"High Temp:        {temp_max}{temp_unit}")
     print(f"Low Temp:         {temp_min}{temp_unit}")
@@ -214,6 +224,7 @@ def display_weather(weather_data: dict
     print(f"Pressure:         {pressure} hPa")
     print(f"Humidity:         {humidity}%")
     print(f"Cloud Coverage:   {cloud_coverage}%")
+    print(f"Visibility:       {percentage_visibility:.0f}%")
     print("=" * 40 + "\n")
 
 
@@ -248,8 +259,8 @@ def get_location_query(choice: str) -> str | None:
     if choice == '1':  # Zip Code Lookup
         while True:
             zip_code = input("Enter the 5-digit US zip code: ").strip()
-            # Error handling prior to sending GET request to API
 
+            # Error handling prior to sending GET request to API
             if len(zip_code) == 5 and zip_code.isdigit():
                 # Format for Geocoding API: zip_code, country_code
                 return f"{zip_code},US"

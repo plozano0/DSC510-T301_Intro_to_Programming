@@ -4,7 +4,7 @@
 # Author Peter Lozano
 # 08/07/2025
 # ####################### Assignment Details ###########################
-# This program is a simple cash register
+# This program performs as a cash register
 # 1. It requests for the user to input the price of an item.
 # 2. It will allow the user to input as many item prices
 #   as the user will like.
@@ -117,13 +117,13 @@ def main():
 
     # Display Final Totals
     total_items = register.get_count
+    # Use locale.currency to format the output
     total_cost = locale.currency(register.get_total)
 
     print("\n" + "-" * 50)
     print(f"{"Transaction Complete":^50}")
     print("-" * 50)
     print(f"\nTotal number of items in the cart: {total_items:>10}")
-    # Use locale.currency to format the output
     print(f"Total amount of the cart: {total_cost:>20}")
     print("\nThank you for using the cash register!")
 
