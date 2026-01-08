@@ -17,7 +17,7 @@ import requests
 import os
 
 # --- Hardcoded values for GET request ---
-API_KEY = "f53e22d038e2d31de9e623faf7ea1003"
+API_KEY = "INSERT KEY HERE"
 GEO_API_URL = "http://api.openweathermap.org/geo/1.0/"
 WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather"
 
